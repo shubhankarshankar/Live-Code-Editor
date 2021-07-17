@@ -1,0 +1,68 @@
+.file-explorer-wrapper {
+  width: 15%;
+  font-family: "Open Sans";
+  color: #eeffff;
+  border-right: 1px solid #4b526d;
+  background-color: #0f111a;
+}
+
+.file-explorer-wrapper .file-explorer-inner {
+  width: 100%;
+}
+
+.file-explorer-wrapper .file-explorer-inner h1 {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul .active {
+  background: #1a1c25;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a {
+  color: #717cb4;
+  text-decoration: none;
+  margin: 5% 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li {
+  width: 100%;
+  padding: 10px;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li .fa-hashtag {
+  color: #82aaff;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li .fa-code {
+  color: #f78c6c;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li .fa-js-square {
+  color: #ffcb6b;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li i {
+  font-size: 15px;
+  margin-right: 3%;
+}
+
+.file-explorer-wrapper .file-explorer-inner nav ul a li span {
+  margin-left: 3%;
+}
+/*# sourceMappingURL=fileexplorer.css.map */

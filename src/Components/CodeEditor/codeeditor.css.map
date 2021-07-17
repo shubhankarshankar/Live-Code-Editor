@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACpB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAYZ;;AAdD,AAIC,oBAJmB,CAInB,EAAE,CAAC;EACF,MAAM,EAAE,GAAG;CACX;;AANF,AAQC,oBARmB,CAQnB,kBAAkB,CAAC;EAClB,MAAM,EAAE,KAAK;CAIb;;AAbF,AAUE,oBAVkB,CAQnB,kBAAkB,CAEjB,WAAW,CAAC;EACX,MAAM,EAAE,IAAI;CACZ",
+    "sources": [
+        "codeeditor.scss"
+    ],
+    "names": [],
+    "file": "codeeditor.css"
+}

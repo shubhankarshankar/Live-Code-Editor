@@ -1,38 +1,47 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.editor-main-outer-wrapper {
+  background-color: #181a1f;
+  color: #eeffff;
+  border-right: 1px solid #4b526d;
+  font-family: "Source Code Pro", monospace;
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor-main-outer-wrapper .code-editor-landing {
+  width: 80%;
+  margin: auto;
 }
+
+.editor-main-outer-wrapper .code-editor-landing div {
+  margin: 5% 0;
+}
+
+.editor-main-outer-wrapper .code-editor-landing .links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.editor-main-outer-wrapper .code-editor-landing .links ul li {
+  margin: 10px 0;
+}
+
+.editor-main-outer-wrapper .code-editor-landing .links ul a {
+  color: inherit;
+}
+
+.editor-main-outer-wrapper .code-editor-landing .links ul a:hover {
+  color: crimson;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.live-view-wrapper {
+  width: 45%;
+}
+/*# sourceMappingURL=App.css.map */

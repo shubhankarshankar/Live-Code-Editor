@@ -1,0 +1,42 @@
+@import "./global_styles";
+
+.App {
+	display: flex;
+	height: 100vh;
+}
+
+.editor-main-outer-wrapper {
+	background-color: $bg-code;
+	color: $white;
+	border-right: 1px solid $text-main;
+	font-family: "Source Code Pro", monospace;
+	width: 40%;
+	.code-editor-landing {
+		width: 80%;
+		margin: auto;
+		div {
+			margin: 5% 0;
+		}
+
+		.links {
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					margin: 10px 0;
+				}
+				a {
+					color: inherit;
+					&:hover {
+						color: crimson;
+						transition: 0.3s;
+					}
+				}
+			}
+		}
+	}
+}
+
+.live-view-wrapper {
+	width: 45%;
+}

@@ -1,0 +1,17 @@
+.code-editor-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.code-editor-wrapper h1 {
+  height: 4vh;
+}
+
+.code-editor-wrapper .react-codemirror2 {
+  height: 100vh;
+}
+
+.code-editor-wrapper .react-codemirror2 .CodeMirror {
+  height: 100%;
+}
+/*# sourceMappingURL=codeeditor.css.map */
