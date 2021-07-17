@@ -23,17 +23,13 @@ const App: React.FC = () => {
 	const [srcDoc, setSrcDoc] = React.useState("");
 
 	React.useEffect(() => {
-		const timeout = setTimeout(() => {
-			setSrcDoc(`
+		setSrcDoc(`
         <html>
           <body>${html}</body>
           <style>${css}</style>
           <script>${js}</script>
         </html>
       `);
-		}, 250);
-
-		return () => clearTimeout(timeout);
 	}, [html, css, js]);
 
 	return (
