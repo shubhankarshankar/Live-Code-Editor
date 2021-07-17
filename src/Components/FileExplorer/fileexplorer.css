@@ -40,6 +40,11 @@
   border: none;
 }
 
+.file-explorer-wrapper .file-explorer-inner .link-share {
+  width: 90%;
+  margin: auto;
+}
+
 .file-explorer-wrapper .file-explorer-inner nav {
   overflow: hidden;
 }

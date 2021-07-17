@@ -1,13 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import pastebin from "../../apis/pastebin";
-import {
-	api_dev_key,
-	api_option,
-	api_paste_expire_date,
-	api_paste_format,
-	api_paste_private,
-} from "../../Config/pastebin_api";
 import "./fileexplorer.css";
 
 export interface FileExplorerProps {
@@ -16,6 +8,7 @@ export interface FileExplorerProps {
 
 const FileExplorer: React.FC<FileExplorerProps> = ({ srcDoc }) => {
 	const [docName, setDocName] = React.useState<string>("Untitled Code");
+	const [shareLink, setShareLink] = React.useState<string | null>(null);
 
 	let api_paste_name: string = "";
 	let api_paste_code: string = "";
@@ -25,27 +18,25 @@ const FileExplorer: React.FC<FileExplorerProps> = ({ srcDoc }) => {
 		api_paste_name = docName;
 		// eslint-disable-next-line
 		api_paste_code = srcDoc;
-	}, [docName]);
+	}, [docName, srcDoc]);
 
 	const handleClick = () => {
-		pastebin
-			.post("/", {
-				params: {
-					api_dev_key,
-					api_option,
-					api_paste_expire_date,
-					api_paste_format,
-					api_paste_private,
-					api_paste_name,
-					api_paste_code,
-				},
-			})
-			.then(res => {
-				console.log(res);
-			})
-			.catch(err => {
-				console.log(err);
-			});
+		var request = new XMLHttpRequest();
+
+		request.open("POST", "https://pastebin.com/api/api_post.php", true);
+
+		request.setRequestHeader(
+			"Content-type",
+			"application/x-www-form-urlencoded"
+		);
+
+		request.send(
+			`api_dev_key=_irQT05SCN0K8yoe8lcIoIxBSY7yUU-h&api_option=paste&api_paste_private=0&api_paste_code=${api_paste_code}&api_paste_name=${api_paste_name}`
+		);
+
+		request.onload = () => {
+			setShareLink(request.response);
+		};
 	};
 
 	return (
@@ -87,6 +78,16 @@ const FileExplorer: React.FC<FileExplorerProps> = ({ srcDoc }) => {
 				<button onClick={handleClick}>
 					<i className="fas fa-share" /> Share Code
 				</button>
+
+				{shareLink && (
+					<div className="link-share">
+						Unless the limit for 24 hrs has reached, here is your shareable
+						link, posted code on pastebin:
+						<br />
+						<br />
+						{shareLink}
+					</div>
+				)}
 			</div>
 		</div>
 	);
