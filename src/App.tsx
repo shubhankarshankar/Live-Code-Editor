@@ -10,7 +10,7 @@ import HTMLEditor from "./Components/CodeEditor/HTMLEditor";
 import CSSEditor from "./Components/CodeEditor/CSSEditor";
 import JSEditor from "./Components/CodeEditor/JSEditor";
 import FileExplorer from "./Components/FileExplorer";
-import Page404 from "./Components/404";
+// import Page404 from "./Components/404";
 import useSessionStorage from "./hooks/useSessionStorage";
 import { defaultHTML, defaultCSS } from "./Config/defaults";
 //import LiveView from "./Components/LiveView";
@@ -43,22 +43,25 @@ const App: React.FC = () => {
 
 				<div className="editor-main-outer-wrapper">
 					<Switch>
-						<Route exact path="/">
+						<Route exact path={`/`}>
+							<Redirect to={`/home`} />
+						</Route>
+						<Route exact path={`/home`}>
 							<CodeEditor />
 						</Route>
-						<Route exact path="/html">
+						<Route exact path={`/html`}>
 							<HTMLEditor value={html} onChange={setHtml} />
 						</Route>
-						<Route exact path="/css">
+						<Route exact path={`/css`}>
 							<CSSEditor value={css} onChange={setCss} />
 						</Route>
-						<Route exact path="/js">
+						<Route exact path={`/js`}>
 							<JSEditor value={js} onChange={setJs} />
 						</Route>
-						<Route exact path="/404">
-							<Page404 />
+						<Route exact path={`/404`}>
+							<Redirect to={`/home`} />
 						</Route>
-						<Redirect to="/404" />
+						<Redirect to={`/home`} />
 					</Switch>
 				</div>
 
