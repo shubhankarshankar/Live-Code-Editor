@@ -1,24 +1,15 @@
-export const defaultHTML:string = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-
-  <body>
-    <div class="header">
-      <h1>Welcome to the online live code editor</h1>
-    </div>
-    <hr />
-    <br />
-    <br />
-    <div class="center-main">
-      You can edit the HTML, CSS and JS files on the left side to diplay result here.
-    </div>
-    <br />
-    <br />
-    <div class="bottom">Have Fun!</div>
-  </body>
-</html>
+export const defaultHTML:string = `<div class="header">
+  <h1>Welcome to the online live code editor</h1>
+</div>
+<hr />
+<br />
+<br />
+<div class="center-main">
+  You can edit the HTML, CSS and JS files on the left side to diplay result here.
+</div>
+<br />
+<br />
+<div class="bottom">Have Fun!</div>
 `;
 
 export const defaultCSS:string = `body {

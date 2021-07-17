@@ -11,22 +11,30 @@ import CSSEditor from "./Components/CodeEditor/CSSEditor";
 import JSEditor from "./Components/CodeEditor/JSEditor";
 import FileExplorer from "./Components/FileExplorer";
 import Page404 from "./Components/404";
+import useSessionStorage from "./hooks/useSessionStorage";
 import { defaultHTML, defaultCSS } from "./Config/defaults";
 //import LiveView from "./Components/LiveView";
 import "./App.css";
 
 const App: React.FC = () => {
-	const [html, setHtml] = React.useState<string>(defaultHTML);
-	const [css, setCss] = React.useState<string>(defaultCSS);
-	const [js, setJs] = React.useState<string>(" ");
+	const [html, setHtml] = useSessionStorage("html", defaultHTML);
+	const [css, setCss] = useSessionStorage("css", defaultCSS);
+	const [js, setJs] = useSessionStorage("js", " ");
+	const [srcDoc, setSrcDoc] = React.useState("");
 
-	const srcDoc = `
+	React.useEffect(() => {
+		const timeout = setTimeout(() => {
+			setSrcDoc(`
         <html>
+          <body>${html}</body>
           <style>${css}</style>
-          ${html}
           <script>${js}</script>
         </html>
-      `;
+      `);
+		}, 250);
+
+		return () => clearTimeout(timeout);
+	}, [html, css, js]);
 
 	return (
 		<div className="App">
