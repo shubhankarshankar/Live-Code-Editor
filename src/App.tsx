@@ -35,7 +35,7 @@ const App: React.FC = () => {
 	return (
 		<div className="App">
 			<Router>
-				<FileExplorer />
+				<FileExplorer srcDoc={srcDoc} />
 
 				<div className="editor-main-outer-wrapper">
 					<Switch>

@@ -12,6 +12,29 @@
 			width: 90%;
 			margin: 20px auto;
 		}
+		input[type="text"] {
+			width: 90%;
+			margin: 10% 5%;
+			height: 50px;
+			font-size: 35px;
+			font-family: "Open Sans";
+			font-weight: bold;
+			color: $white;
+			background-color: $bg-main;
+			border: none;
+			outline: none;
+		}
+		button {
+			width: 90%;
+			margin: 10% 5%;
+			height: 50px;
+			font-size: 25px;
+			cursor: pointer;
+			color: $white;
+			background-color: $active;
+			border-radius: 5px;
+			border: none;
+		}
 		nav {
 			overflow: hidden;
 			ul {

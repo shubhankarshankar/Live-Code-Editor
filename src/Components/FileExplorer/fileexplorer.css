@@ -15,6 +15,31 @@
   margin: 20px auto;
 }
 
+.file-explorer-wrapper .file-explorer-inner input[type="text"] {
+  width: 90%;
+  margin: 10% 5%;
+  height: 50px;
+  font-size: 35px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  color: #eeffff;
+  background-color: #0f111a;
+  border: none;
+  outline: none;
+}
+
+.file-explorer-wrapper .file-explorer-inner button {
+  width: 90%;
+  margin: 10% 5%;
+  height: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #eeffff;
+  background-color: #1a1c25;
+  border-radius: 5px;
+  border: none;
+}
+
 .file-explorer-wrapper .file-explorer-inner nav {
   overflow: hidden;
 }
