@@ -15,6 +15,10 @@
   margin: 20px auto;
 }
 
+.file-explorer-wrapper .file-explorer-inner nav {
+  overflow: hidden;
+}
+
 .file-explorer-wrapper .file-explorer-inner nav ul {
   padding: 0;
   list-style: none;
