@@ -1,5 +1,8 @@
 # LIVE CODE EDITOR FOR DYTE FRONT END TASK
 
+This project allows you to make simple websites on online code editor using HTML, CSS and JS.
+This is the submission for the Dyte's Frontend Placement Task.
+
 ## Installation
 To run this project on ```http://localhost:3000``` use the following commands:
 <br />
@@ -22,7 +25,6 @@ In case the code sharing button doesn't work, please run the project on localhos
 
 <br />
 
-
 ## ScreenShots
 ![image](https://user-images.githubusercontent.com/47575172/126042816-dfae70f0-5efb-429e-9568-2a8d5e221903.png)
 ![image](https://user-images.githubusercontent.com/47575172/126042823-fe8e55fa-bcdd-46b0-af15-0d80fb733c13.png)
@@ -36,5 +38,5 @@ In case the code sharing button doesn't work, please run the project on localhos
 1. Helped in fixing routing on GH Pages - https://github.com/rafgraph/spa-github-pages
 2. Pastebin API Docs - https://pastebin.com/doc_api
 
-##Thank you!
+## Thank you!
 
